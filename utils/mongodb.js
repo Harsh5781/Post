@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
-const connect = async function(){mongoose.connect('mongodb://localhost:27017/post')
+const url = process.env.Url || 'mongodb://localhost:27017/post'
+const connect = async function(){mongoose.connect(url)
 .then(()=>{
     console.log('Connected to database')
 })
